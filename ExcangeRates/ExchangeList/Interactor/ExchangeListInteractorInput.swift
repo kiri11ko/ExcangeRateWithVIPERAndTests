@@ -9,5 +9,6 @@
 import Foundation
 
 protocol ExchangeListInteractorInput {
-
+    
+    func loadJSON(complition: @escaping ()->Void) 
 }

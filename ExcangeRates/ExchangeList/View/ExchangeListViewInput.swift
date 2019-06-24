@@ -12,6 +12,6 @@ protocol ExchangeListViewInput: class {
         @author generamba help
         Setup initial state of the view
     */
-
+    func refreshTableview()
     func setupInitialState()
 }

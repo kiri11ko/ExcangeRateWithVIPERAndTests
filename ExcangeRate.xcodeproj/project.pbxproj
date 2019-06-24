@@ -13,7 +13,8 @@
 		1F56518822C0EDEB00FFC14B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F56518622C0EDEB00FFC14B /* LaunchScreen.storyboard */; };
 		1F56519322C0EDEC00FFC14B /* ExcangeRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F56519222C0EDEC00FFC14B /* ExcangeRateTests.swift */; };
 		1FA0210122C0F23200C511EE /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA020FF22C0F23200C511EE /* Rates.swift */; };
-		1FA0210222C0F23200C511EE /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0210022C0F23200C511EE /* Json4Swift_Base.swift */; };
+		1FA0210222C0F23200C511EE /* JsonBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0210022C0F23200C511EE /* JsonBase.swift */; };
+		1FA0210422C0F7C600C511EE /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0210322C0F7C600C511EE /* ExchangeData.swift */; };
 		2609FFA9C7E9B039AC7CD9CE /* ExchangeListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E857466114E795856560CCD7 /* ExchangeListInteractorInput.swift */; };
 		2F97787379DEF1136B81728A /* ExchangeListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E836596B5BB9ADA0C10BC92 /* ExchangeListViewTests.swift */; };
 		345DCBEC187959D6EB0DC8FB /* ExchangeListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87A29807C95F99AA9539A7 /* ExchangeListInteractorOutput.swift */; };
@@ -57,7 +58,8 @@
 		1F56519222C0EDEC00FFC14B /* ExcangeRateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcangeRateTests.swift; sourceTree = "<group>"; };
 		1F56519422C0EDEC00FFC14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA020FF22C0F23200C511EE /* Rates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
-		1FA0210022C0F23200C511EE /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		1FA0210022C0F23200C511EE /* JsonBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonBase.swift; sourceTree = "<group>"; };
+		1FA0210322C0F7C600C511EE /* ExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeData.swift; sourceTree = "<group>"; };
 		4030F532B1D835761BDD8D21 /* ExchangeListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListModuleInput.swift; sourceTree = "<group>"; };
 		40D6FD48F45C159753462CA5 /* ExchangeListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListViewInput.swift; sourceTree = "<group>"; };
 		4719160609E8B92F945767DC /* ExchangeListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListRouter.swift; sourceTree = "<group>"; };
@@ -156,7 +158,8 @@
 		1FA020FE22C0F1D000C511EE /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				1FA0210022C0F23200C511EE /* Json4Swift_Base.swift */,
+				1FA0210022C0F23200C511EE /* JsonBase.swift */,
+				1FA0210322C0F7C600C511EE /* ExchangeData.swift */,
 				1FA020FF22C0F23200C511EE /* Rates.swift */,
 			);
 			path = Entity;
@@ -364,8 +367,9 @@
 				7796466F6699F6E404DDFC1F /* ExchangeListPresenter.swift in Sources */,
 				2609FFA9C7E9B039AC7CD9CE /* ExchangeListInteractorInput.swift in Sources */,
 				345DCBEC187959D6EB0DC8FB /* ExchangeListInteractorOutput.swift in Sources */,
-				1FA0210222C0F23200C511EE /* Json4Swift_Base.swift in Sources */,
+				1FA0210222C0F23200C511EE /* JsonBase.swift in Sources */,
 				8BDC7579BA7025E3702531FD /* ExchangeListInteractor.swift in Sources */,
+				1FA0210422C0F7C600C511EE /* ExchangeData.swift in Sources */,
 				96C0BC5A7730C3454F8D35C2 /* ExchangeListRouterInput.swift in Sources */,
 				83AE3C839AE3B653F33BCD90 /* ExchangeListRouter.swift in Sources */,
 				1FA0210122C0F23200C511EE /* Rates.swift in Sources */,

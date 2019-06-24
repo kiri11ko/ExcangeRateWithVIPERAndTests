@@ -7,7 +7,8 @@
 //
 
 import Foundation
-struct Json4Swift_Base : Codable {
+
+struct JsonBase : Codable {
 	let base : String?
 	let date : String?
 	let rates : Rates?

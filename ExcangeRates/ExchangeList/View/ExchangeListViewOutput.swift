@@ -12,6 +12,8 @@ protocol ExchangeListViewOutput {
         @author generamba help
         Notify presenter that view is ready
     */
-
+    var exchange: ExchangeData? { get }
+    var sectionCount: Int { get }
     func viewIsReady()
+    
 }
