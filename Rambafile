@@ -1,0 +1,32 @@
+### Headers settings
+company: Home
+
+### Xcode project settings
+project_name: ExcangeRate
+xcodeproj_path: ExcangeRate.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: ExcangeRate
+
+# The file path for new modules
+project_file_path: ExcangeRates
+
+# The Xcode group path to new modules
+project_group_path: ExcangeRate
+
+### Tests generation settings section
+# The tests target name
+test_target: ExcangeRateTests
+
+# The file path for new tests
+test_file_path: ExcangeRateTests
+
+# The Xcode group path to new tests
+test_group_path: ExcangeRateTests
+
+### Templates
+templates:
+- {name: rviper_controller}
+- {name: mvvm_controller}
+- {name: swifty_viper}

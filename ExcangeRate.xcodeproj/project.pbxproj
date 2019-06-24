@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1F56517E22C0EDEA00FFC14B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F56517D22C0EDEA00FFC14B /* AppDelegate.swift */; };
+		1F56518322C0EDEA00FFC14B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F56518122C0EDEA00FFC14B /* Main.storyboard */; };
+		1F56518522C0EDEB00FFC14B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F56518422C0EDEB00FFC14B /* Assets.xcassets */; };
+		1F56518822C0EDEB00FFC14B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F56518622C0EDEB00FFC14B /* LaunchScreen.storyboard */; };
+		1F56519322C0EDEC00FFC14B /* ExcangeRateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F56519222C0EDEC00FFC14B /* ExcangeRateTests.swift */; };
+		1FA0210122C0F23200C511EE /* Rates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA020FF22C0F23200C511EE /* Rates.swift */; };
+		1FA0210222C0F23200C511EE /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA0210022C0F23200C511EE /* Json4Swift_Base.swift */; };
+		2609FFA9C7E9B039AC7CD9CE /* ExchangeListInteractorInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E857466114E795856560CCD7 /* ExchangeListInteractorInput.swift */; };
+		2F97787379DEF1136B81728A /* ExchangeListViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E836596B5BB9ADA0C10BC92 /* ExchangeListViewTests.swift */; };
+		345DCBEC187959D6EB0DC8FB /* ExchangeListInteractorOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE87A29807C95F99AA9539A7 /* ExchangeListInteractorOutput.swift */; };
+		4C93FBBDECE70B9FBF3E01D1 /* ExchangeListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1526AF1A70EEC301C0106998 /* ExchangeListPresenterTests.swift */; };
+		67D81DC91CB713564CA04A10 /* ExchangeListConfiguratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE0C03AF0D34D80A343AEC6 /* ExchangeListConfiguratorTests.swift */; };
+		6B20C26B118FADA019D8F4E6 /* ExchangeListRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F13A45EC63CD55F7280980A /* ExchangeListRouterTests.swift */; };
+		70FBF5C0F41C282FDE7B9C80 /* ExchangeListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0358FEAE89A2253E3A4F51AD /* ExchangeListConfigurator.swift */; };
+		7439806F3ECB8C9A510881A3 /* ExchangeListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2ADFF246E7BB6D09DB310D /* ExchangeListInteractorTests.swift */; };
+		7796466F6699F6E404DDFC1F /* ExchangeListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A43D96837F6D36ED2523E2 /* ExchangeListPresenter.swift */; };
+		798AE291C4AFAE556CA5E557 /* ExchangeListModuleInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4030F532B1D835761BDD8D21 /* ExchangeListModuleInput.swift */; };
+		83AE3C839AE3B653F33BCD90 /* ExchangeListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4719160609E8B92F945767DC /* ExchangeListRouter.swift */; };
+		8BDC7579BA7025E3702531FD /* ExchangeListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8FCF29FA341CD53167494FC /* ExchangeListInteractor.swift */; };
+		96C0BC5A7730C3454F8D35C2 /* ExchangeListRouterInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE72D70DD5C12D89909DAE88 /* ExchangeListRouterInput.swift */; };
+		9F9FB5E8A43AEADC151302BE /* ExchangeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAA0326368B879C448B7CE7 /* ExchangeListViewController.swift */; };
+		DF671A7BDC968834CDE1B76A /* ExchangeListViewInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D6FD48F45C159753462CA5 /* ExchangeListViewInput.swift */; };
+		E539F83B111D48DF7769FDE4 /* ExchangeListInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F173BDF59C1A94AB08754C /* ExchangeListInitializer.swift */; };
+		FB7597EE5F03707D273D1C8F /* ExchangeListViewOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941091C670A68DB939654AEB /* ExchangeListViewOutput.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1F56518F22C0EDEC00FFC14B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F56517222C0EDEA00FFC14B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F56517922C0EDEA00FFC14B;
+			remoteInfo = ExcangeRate;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0358FEAE89A2253E3A4F51AD /* ExchangeListConfigurator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListConfigurator.swift; sourceTree = "<group>"; };
+		0EAA0326368B879C448B7CE7 /* ExchangeListViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListViewController.swift; sourceTree = "<group>"; };
+		1526AF1A70EEC301C0106998 /* ExchangeListPresenterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListPresenterTests.swift; sourceTree = "<group>"; };
+		1F56517A22C0EDEA00FFC14B /* ExcangeRate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExcangeRate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F56517D22C0EDEA00FFC14B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1F56518222C0EDEA00FFC14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1F56518422C0EDEB00FFC14B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1F56518722C0EDEB00FFC14B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1F56518922C0EDEB00FFC14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F56518E22C0EDEC00FFC14B /* ExcangeRateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExcangeRateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F56519222C0EDEC00FFC14B /* ExcangeRateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcangeRateTests.swift; sourceTree = "<group>"; };
+		1F56519422C0EDEC00FFC14B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FA020FF22C0F23200C511EE /* Rates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rates.swift; sourceTree = "<group>"; };
+		1FA0210022C0F23200C511EE /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		4030F532B1D835761BDD8D21 /* ExchangeListModuleInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListModuleInput.swift; sourceTree = "<group>"; };
+		40D6FD48F45C159753462CA5 /* ExchangeListViewInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListViewInput.swift; sourceTree = "<group>"; };
+		4719160609E8B92F945767DC /* ExchangeListRouter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListRouter.swift; sourceTree = "<group>"; };
+		4E836596B5BB9ADA0C10BC92 /* ExchangeListViewTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListViewTests.swift; sourceTree = "<group>"; };
+		5F13A45EC63CD55F7280980A /* ExchangeListRouterTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListRouterTests.swift; sourceTree = "<group>"; };
+		941091C670A68DB939654AEB /* ExchangeListViewOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListViewOutput.swift; sourceTree = "<group>"; };
+		9B2ADFF246E7BB6D09DB310D /* ExchangeListInteractorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListInteractorTests.swift; sourceTree = "<group>"; };
+		B8FCF29FA341CD53167494FC /* ExchangeListInteractor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListInteractor.swift; sourceTree = "<group>"; };
+		C5F173BDF59C1A94AB08754C /* ExchangeListInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListInitializer.swift; sourceTree = "<group>"; };
+		CE72D70DD5C12D89909DAE88 /* ExchangeListRouterInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListRouterInput.swift; sourceTree = "<group>"; };
+		D4A43D96837F6D36ED2523E2 /* ExchangeListPresenter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListPresenter.swift; sourceTree = "<group>"; };
+		E857466114E795856560CCD7 /* ExchangeListInteractorInput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListInteractorInput.swift; sourceTree = "<group>"; };
+		EE87A29807C95F99AA9539A7 /* ExchangeListInteractorOutput.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListInteractorOutput.swift; sourceTree = "<group>"; };
+		FBE0C03AF0D34D80A343AEC6 /* ExchangeListConfiguratorTests.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ExchangeListConfiguratorTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1F56517722C0EDEA00FFC14B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F56518B22C0EDEC00FFC14B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0A3906150DFDA00B94DD50FD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E836596B5BB9ADA0C10BC92 /* ExchangeListViewTests.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0A7097923A21925C00372A2E /* ExchangeList */ = {
+			isa = PBXGroup;
+			children = (
+				50DE4F7719280C3BA73035D2 /* Configurator */,
+				0A3906150DFDA00B94DD50FD /* View */,
+				A3370B6E2A3E1D3C3235C166 /* Interactor */,
+				98E093B4809EE384A52BEDAA /* Presenter */,
+				3B308B989CF969F017565BDB /* Router */,
+			);
+			path = ExchangeList;
+			sourceTree = "<group>";
+		};
+		1F56517122C0EDEA00FFC14B = {
+			isa = PBXGroup;
+			children = (
+				1F56517C22C0EDEA00FFC14B /* ExcangeRate */,
+				1F56519122C0EDEC00FFC14B /* ExcangeRateTests */,
+				1F56517B22C0EDEA00FFC14B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1F56517B22C0EDEA00FFC14B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F56517A22C0EDEA00FFC14B /* ExcangeRate.app */,
+				1F56518E22C0EDEC00FFC14B /* ExcangeRateTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1F56517C22C0EDEA00FFC14B /* ExcangeRate */ = {
+			isa = PBXGroup;
+			children = (
+				1F56517D22C0EDEA00FFC14B /* AppDelegate.swift */,
+				1F56518122C0EDEA00FFC14B /* Main.storyboard */,
+				1F56518422C0EDEB00FFC14B /* Assets.xcassets */,
+				1F56518622C0EDEB00FFC14B /* LaunchScreen.storyboard */,
+				1F56518922C0EDEB00FFC14B /* Info.plist */,
+				99BCDBBFEC18CED94AEC3B74 /* ExchangeList */,
+			);
+			path = ExcangeRate;
+			sourceTree = "<group>";
+		};
+		1F56519122C0EDEC00FFC14B /* ExcangeRateTests */ = {
+			isa = PBXGroup;
+			children = (
+				1F56519222C0EDEC00FFC14B /* ExcangeRateTests.swift */,
+				1F56519422C0EDEC00FFC14B /* Info.plist */,
+				0A7097923A21925C00372A2E /* ExchangeList */,
+			);
+			path = ExcangeRateTests;
+			sourceTree = "<group>";
+		};
+		1FA020FE22C0F1D000C511EE /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1FA0210022C0F23200C511EE /* Json4Swift_Base.swift */,
+				1FA020FF22C0F23200C511EE /* Rates.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		3557BF6D73149C28E20F78CB /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				E857466114E795856560CCD7 /* ExchangeListInteractorInput.swift */,
+				EE87A29807C95F99AA9539A7 /* ExchangeListInteractorOutput.swift */,
+				B8FCF29FA341CD53167494FC /* ExchangeListInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		3B308B989CF969F017565BDB /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				5F13A45EC63CD55F7280980A /* ExchangeListRouterTests.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		50DE4F7719280C3BA73035D2 /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				FBE0C03AF0D34D80A343AEC6 /* ExchangeListConfiguratorTests.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		5101869455E0C451022CE1D9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4030F532B1D835761BDD8D21 /* ExchangeListModuleInput.swift */,
+				D4A43D96837F6D36ED2523E2 /* ExchangeListPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		625650C1F766846A1CFAA85C /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				CE72D70DD5C12D89909DAE88 /* ExchangeListRouterInput.swift */,
+				4719160609E8B92F945767DC /* ExchangeListRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		780694ACC865D39DDC40579B /* Configurator */ = {
+			isa = PBXGroup;
+			children = (
+				0358FEAE89A2253E3A4F51AD /* ExchangeListConfigurator.swift */,
+				C5F173BDF59C1A94AB08754C /* ExchangeListInitializer.swift */,
+			);
+			path = Configurator;
+			sourceTree = "<group>";
+		};
+		98E093B4809EE384A52BEDAA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1526AF1A70EEC301C0106998 /* ExchangeListPresenterTests.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		99BCDBBFEC18CED94AEC3B74 /* ExchangeList */ = {
+			isa = PBXGroup;
+			children = (
+				1FA020FE22C0F1D000C511EE /* Entity */,
+				E601A5CD35D44FD2DF9AAC5C /* View */,
+				5101869455E0C451022CE1D9 /* Presenter */,
+				3557BF6D73149C28E20F78CB /* Interactor */,
+				625650C1F766846A1CFAA85C /* Router */,
+				780694ACC865D39DDC40579B /* Configurator */,
+			);
+			name = ExchangeList;
+			path = ExcangeRates/ExchangeList;
+			sourceTree = SOURCE_ROOT;
+		};
+		A3370B6E2A3E1D3C3235C166 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9B2ADFF246E7BB6D09DB310D /* ExchangeListInteractorTests.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		E601A5CD35D44FD2DF9AAC5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				40D6FD48F45C159753462CA5 /* ExchangeListViewInput.swift */,
+				941091C670A68DB939654AEB /* ExchangeListViewOutput.swift */,
+				0EAA0326368B879C448B7CE7 /* ExchangeListViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1F56517922C0EDEA00FFC14B /* ExcangeRate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F56519722C0EDEC00FFC14B /* Build configuration list for PBXNativeTarget "ExcangeRate" */;
+			buildPhases = (
+				1F56517622C0EDEA00FFC14B /* Sources */,
+				1F56517722C0EDEA00FFC14B /* Frameworks */,
+				1F56517822C0EDEA00FFC14B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ExcangeRate;
+			productName = ExcangeRate;
+			productReference = 1F56517A22C0EDEA00FFC14B /* ExcangeRate.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1F56518D22C0EDEC00FFC14B /* ExcangeRateTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F56519A22C0EDEC00FFC14B /* Build configuration list for PBXNativeTarget "ExcangeRateTests" */;
+			buildPhases = (
+				1F56518A22C0EDEC00FFC14B /* Sources */,
+				1F56518B22C0EDEC00FFC14B /* Frameworks */,
+				1F56518C22C0EDEC00FFC14B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F56519022C0EDEC00FFC14B /* PBXTargetDependency */,
+			);
+			name = ExcangeRateTests;
+			productName = ExcangeRateTests;
+			productReference = 1F56518E22C0EDEC00FFC14B /* ExcangeRateTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1F56517222C0EDEA00FFC14B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Кирилл Лукьянов";
+				TargetAttributes = {
+					1F56517922C0EDEA00FFC14B = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					1F56518D22C0EDEC00FFC14B = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 1F56517922C0EDEA00FFC14B;
+					};
+				};
+			};
+			buildConfigurationList = 1F56517522C0EDEA00FFC14B /* Build configuration list for PBXProject "ExcangeRate" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1F56517122C0EDEA00FFC14B;
+			productRefGroup = 1F56517B22C0EDEA00FFC14B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1F56517922C0EDEA00FFC14B /* ExcangeRate */,
+				1F56518D22C0EDEC00FFC14B /* ExcangeRateTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1F56517822C0EDEA00FFC14B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F56518822C0EDEB00FFC14B /* LaunchScreen.storyboard in Resources */,
+				1F56518522C0EDEB00FFC14B /* Assets.xcassets in Resources */,
+				1F56518322C0EDEA00FFC14B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F56518C22C0EDEC00FFC14B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1F56517622C0EDEA00FFC14B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F56517E22C0EDEA00FFC14B /* AppDelegate.swift in Sources */,
+				DF671A7BDC968834CDE1B76A /* ExchangeListViewInput.swift in Sources */,
+				FB7597EE5F03707D273D1C8F /* ExchangeListViewOutput.swift in Sources */,
+				9F9FB5E8A43AEADC151302BE /* ExchangeListViewController.swift in Sources */,
+				798AE291C4AFAE556CA5E557 /* ExchangeListModuleInput.swift in Sources */,
+				7796466F6699F6E404DDFC1F /* ExchangeListPresenter.swift in Sources */,
+				2609FFA9C7E9B039AC7CD9CE /* ExchangeListInteractorInput.swift in Sources */,
+				345DCBEC187959D6EB0DC8FB /* ExchangeListInteractorOutput.swift in Sources */,
+				1FA0210222C0F23200C511EE /* Json4Swift_Base.swift in Sources */,
+				8BDC7579BA7025E3702531FD /* ExchangeListInteractor.swift in Sources */,
+				96C0BC5A7730C3454F8D35C2 /* ExchangeListRouterInput.swift in Sources */,
+				83AE3C839AE3B653F33BCD90 /* ExchangeListRouter.swift in Sources */,
+				1FA0210122C0F23200C511EE /* Rates.swift in Sources */,
+				70FBF5C0F41C282FDE7B9C80 /* ExchangeListConfigurator.swift in Sources */,
+				E539F83B111D48DF7769FDE4 /* ExchangeListInitializer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1F56518A22C0EDEC00FFC14B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F56519322C0EDEC00FFC14B /* ExcangeRateTests.swift in Sources */,
+				67D81DC91CB713564CA04A10 /* ExchangeListConfiguratorTests.swift in Sources */,
+				2F97787379DEF1136B81728A /* ExchangeListViewTests.swift in Sources */,
+				7439806F3ECB8C9A510881A3 /* ExchangeListInteractorTests.swift in Sources */,
+				4C93FBBDECE70B9FBF3E01D1 /* ExchangeListPresenterTests.swift in Sources */,
+				6B20C26B118FADA019D8F4E6 /* ExchangeListRouterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1F56519022C0EDEC00FFC14B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F56517922C0EDEA00FFC14B /* ExcangeRate */;
+			targetProxy = 1F56518F22C0EDEC00FFC14B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1F56518122C0EDEA00FFC14B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F56518222C0EDEA00FFC14B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1F56518622C0EDEB00FFC14B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F56518722C0EDEB00FFC14B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1F56519522C0EDEC00FFC14B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1F56519622C0EDEC00FFC14B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1F56519822C0EDEC00FFC14B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 257R75DVT3;
+				INFOPLIST_FILE = ExcangeRate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kirillko.net.ExcangeRate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F56519922C0EDEC00FFC14B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 257R75DVT3;
+				INFOPLIST_FILE = ExcangeRate/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kirillko.net.ExcangeRate;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1F56519B22C0EDEC00FFC14B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 257R75DVT3;
+				INFOPLIST_FILE = ExcangeRateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kirillko.net.ExcangeRateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExcangeRate.app/ExcangeRate";
+			};
+			name = Debug;
+		};
+		1F56519C22C0EDEC00FFC14B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 257R75DVT3;
+				INFOPLIST_FILE = ExcangeRateTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = kirillko.net.ExcangeRateTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ExcangeRate.app/ExcangeRate";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1F56517522C0EDEA00FFC14B /* Build configuration list for PBXProject "ExcangeRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F56519522C0EDEC00FFC14B /* Debug */,
+				1F56519622C0EDEC00FFC14B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F56519722C0EDEC00FFC14B /* Build configuration list for PBXNativeTarget "ExcangeRate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F56519822C0EDEC00FFC14B /* Debug */,
+				1F56519922C0EDEC00FFC14B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1F56519A22C0EDEC00FFC14B /* Build configuration list for PBXNativeTarget "ExcangeRateTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F56519B22C0EDEC00FFC14B /* Debug */,
+				1F56519C22C0EDEC00FFC14B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1F56517222C0EDEA00FFC14B /* Project object */;
+}
