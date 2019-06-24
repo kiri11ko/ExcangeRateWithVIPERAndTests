@@ -20,7 +20,7 @@ class ExchangeListModuleConfigurator {
     private func configure(viewController: ExchangeListViewController) {
 
         let router = ExchangeListRouter()
-
+        router.view = viewController
         let presenter = ExchangeListPresenter()
         presenter.view = viewController
         presenter.router = router

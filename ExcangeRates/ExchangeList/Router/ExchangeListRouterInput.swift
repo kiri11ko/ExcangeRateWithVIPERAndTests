@@ -9,5 +9,6 @@
 import Foundation
 
 protocol ExchangeListRouterInput {
-
+    var view: ExchangeListViewController! { get set }
+    func openDetailsView() 
 }

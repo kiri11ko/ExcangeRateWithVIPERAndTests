@@ -20,7 +20,7 @@ class ExchangeListInteractor: ExchangeListInteractorInput {
             let responseModel = try? jsonDecoder.decode(JsonBase.self, from: data!)
             guard let model = responseModel else { return }
             self.output.exchange = ExchangeData(exchangeRate: model)
-            print("downloadds")
+            print(model)
             complition()
         }
         task.resume()

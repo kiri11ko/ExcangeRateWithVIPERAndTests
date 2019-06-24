@@ -15,23 +15,23 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-
+        self.refreshControl?.addTarget(self, action: #selector(refreshJsonData), for: UIControl.Event.valueChanged)
     }
+    
     func refreshTableview() {
         DispatchQueue.main.async {
-            print("refresh")
             self.tableView.reloadData()
-            self.tableView.refreshControl?.endRefreshing()
+            self.refreshControl?.endRefreshing()
         }
         
     }
-    @objc func refreshJsonData() {
+    @objc func refreshJsonData(refreshControl: UIRefreshControl) {
         print("pull")
         output.viewIsReady()
     }
 
     func setupInitialState() {
-        tableView.refreshControl!.addTarget(self, action: #selector(refreshJsonData), for: .valueChanged)
+        
         
     }
     
@@ -46,6 +46,9 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = output.exchange?.exchangeList[indexPath.row] ?? ""
         return cell
+    }
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output.openDetailsView()
     }
 }
 

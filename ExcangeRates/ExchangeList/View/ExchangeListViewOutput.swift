@@ -15,5 +15,5 @@ protocol ExchangeListViewOutput {
     var exchange: ExchangeData? { get }
     var sectionCount: Int { get }
     func viewIsReady()
-    
+    func openDetailsView()
 }

@@ -7,13 +7,15 @@
 //
 
 class ExchangeListPresenter: ExchangeListModuleInput, ExchangeListViewOutput, ExchangeListInteractorOutput {
-    
+
     var exchange: ExchangeData?
     weak var view: ExchangeListViewInput!
     var interactor: ExchangeListInteractorInput!
     var router: ExchangeListRouterInput!
     var sectionCount: Int = 1
-    
+    func openDetailsView() {
+        router.openDetailsView()
+    }
     func viewIsReady() {
         interactor.loadJSON() {
             self.view.refreshTableview()
