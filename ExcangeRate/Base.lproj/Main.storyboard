@@ -62,7 +62,32 @@
                     <view key="view" contentMode="scaleToFill" id="bN7-mq-o9G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="i9x-94-vey">
+                                <rect key="frame" x="30" y="188" width="354" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="bsa-bO-kb7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ExchangeRate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMV-97-7S9">
+                                <rect key="frame" x="30" y="368" width="354" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="G59-zw-iYh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hPl-09-cLr" firstAttribute="trailing" secondItem="i9x-94-vey" secondAttribute="trailing" constant="30" id="Lcs-Cj-Xr0"/>
+                            <constraint firstItem="hMV-97-7S9" firstAttribute="top" secondItem="i9x-94-vey" secondAttribute="bottom" constant="30" id="cPX-SC-nKh"/>
+                            <constraint firstItem="i9x-94-vey" firstAttribute="top" secondItem="hPl-09-cLr" secondAttribute="top" constant="100" id="dUX-hJ-lbo"/>
+                            <constraint firstItem="hPl-09-cLr" firstAttribute="trailing" secondItem="hMV-97-7S9" secondAttribute="trailing" constant="30" id="eLy-FZ-KQa"/>
+                            <constraint firstItem="i9x-94-vey" firstAttribute="leading" secondItem="hPl-09-cLr" secondAttribute="leading" constant="30" id="jC9-ZY-fe9"/>
+                            <constraint firstItem="hMV-97-7S9" firstAttribute="leading" secondItem="hPl-09-cLr" secondAttribute="leading" constant="30" id="wld-Ab-hWd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="hPl-09-cLr"/>
                     </view>
                 </viewController>

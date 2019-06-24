@@ -13,6 +13,7 @@ class ExchangeListPresenter: ExchangeListModuleInput, ExchangeListViewOutput, Ex
     var interactor: ExchangeListInteractorInput!
     var router: ExchangeListRouterInput!
     var sectionCount: Int = 1
+    
     func openDetailsView() {
         router.openDetailsView()
     }
