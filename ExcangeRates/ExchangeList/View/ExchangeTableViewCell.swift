@@ -10,7 +10,15 @@ import UIKit
 
 class ExchangeTableViewCell: UITableViewCell {
     var output: ExchangeListViewOutput!
-    @IBOutlet weak var countrImageView: UIImageView!
+    @IBOutlet weak var countrImageView: UIImageView! {
+        didSet {
+            countrImageView.layer.borderWidth = 1
+            countrImageView.layer.masksToBounds = false
+            countrImageView.layer.borderColor = UIColor.white.cgColor
+            countrImageView.layer.cornerRadius = countrImageView.frame.height / 2
+            countrImageView.clipsToBounds = true
+        }
+    }
     @IBOutlet weak var rateExchangeTextField: UITextField!
     @IBOutlet weak var countryNameLabel: UILabel!
     @IBOutlet weak var countryRateLabel: UILabel!
