@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+@testable import ExcangeRate
 class ExchangeListViewTests: XCTestCase {
 
     override func setUp() {

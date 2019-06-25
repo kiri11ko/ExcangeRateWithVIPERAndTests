@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+@testable import ExcangeRate
 class ExchangeListInteractorTests: XCTestCase {
 
     override func setUp() {
@@ -21,6 +21,12 @@ class ExchangeListInteractorTests: XCTestCase {
     }
 
     class MockPresenter: ExchangeListInteractorOutput {
+        var exchange: ExchangeData?
+        
+        func showAlert(title: String, message: String) {
+            
+        }
+        
 
     }
 }

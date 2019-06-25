@@ -55,7 +55,7 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        return output.sectionCount
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+@testable import ExcangeRate
 class ExchangeListPresenterTest: XCTestCase {
 
     override func setUp() {
@@ -21,14 +21,37 @@ class ExchangeListPresenterTest: XCTestCase {
     }
 
     class MockInteractor: ExchangeListInteractorInput {
+        func loadJSON(complition: @escaping () -> Void) {
+            
+        }
+        
 
     }
 
     class MockRouter: ExchangeListRouterInput {
+        var view: ExchangeListViewController!
+        
+        func openDetailsView(data: CountryData) {
+            
+        }
+        
 
     }
 
     class MockViewController: ExchangeListViewInput {
+        func showAlert(title: String, message: String) {
+            
+        }
+        
+        func refreshTableview() {
+            
+        }
+        
+        func refreshTableviewRows() {
+            
+        }
+        
+        
 
         func setupInitialState() {
 
