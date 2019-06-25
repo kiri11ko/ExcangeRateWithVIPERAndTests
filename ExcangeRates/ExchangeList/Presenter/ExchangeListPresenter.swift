@@ -25,9 +25,7 @@ class ExchangeListPresenter: ExchangeListModuleInput, ExchangeListViewOutput, Ex
         router.openDetailsView(data: countryData)
     }
     func viewIsReady() {
-        interactor.loadJSON() {
-            self.view.refreshTableview()
-        }
+        interactor.loadJSON()
     }
     func calculateRate(index: Int, text: String) {
         guard let rates = (exchange?.exchangeRate.rates)  else { return }
@@ -38,6 +36,10 @@ class ExchangeListPresenter: ExchangeListModuleInput, ExchangeListViewOutput, Ex
             }
         }
         view.refreshTableviewRows()
+    }
+    
+    func refreshUI() {
+        view.refreshTableview()
     }
     
     func showAlert(title: String, message: String) {

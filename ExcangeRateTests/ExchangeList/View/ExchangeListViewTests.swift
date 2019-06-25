@@ -27,4 +27,20 @@ class ExchangeListViewTests: XCTestCase {
     func testWhenViewIsLoadedTableViewNotNil() {
         XCTAssertNotNil(sut.tableView)
     }
+  
+    
+    func testWhenViewIsLoadedTableViewDelegateIsSet() {
+        XCTAssertTrue(sut.tableView.delegate is ExchangeListViewController)
+    }
+    
+    func testWhenViewIsLoadedTableViewDataSourceIsSet() {
+        XCTAssertTrue(sut.tableView.dataSource is ExchangeListViewController)
+    }
+    
+    func testWhenViewIsLoadedTableViewDelegateEqualsTableViewDataSource() {
+        XCTAssertEqual(
+            sut.tableView.delegate as? ExchangeListViewController,
+            sut.tableView.dataSource as? ExchangeListViewController
+        )
+    }
 }

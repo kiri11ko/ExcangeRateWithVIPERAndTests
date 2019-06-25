@@ -9,11 +9,9 @@ import Foundation
 
 class ExchangeListInteractor: ExchangeListInteractorInput {
 
-    
-
     weak var output: ExchangeListInteractorOutput!
     
-    func loadJSON(complition: @escaping ()->Void) {
+    func loadJSON() {
         guard let url = URL(string: "https://revolut.duckdns.org/latest?base=USD") else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response,  error)  in
             let jsonDecoder = JSONDecoder()
@@ -26,7 +24,7 @@ class ExchangeListInteractor: ExchangeListInteractorInput {
             guard let model = responseModel else { return }
             self.output.exchange = ExchangeData(exchangeRate: model)
             print(model)
-            complition()
+            self.output.refreshUI()
         }
         task.resume()
     }

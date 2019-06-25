@@ -13,7 +13,7 @@
         <!--Exchangelist View Controller-->
         <scene sceneID="qSZ-DP-duU">
             <objects>
-                <viewController id="QgX-lJ-YH4" customClass="ExchangeListViewController" customModule="ExcangeRate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExchangeListViewController" id="QgX-lJ-YH4" customClass="ExchangeListViewController" customModule="ExcangeRate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FCb-Ml-PIf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,7 +64,7 @@
         <!--Exchangedetails View Controller-->
         <scene sceneID="ixz-78-Smb">
             <objects>
-                <viewController id="L9l-rK-VbD" customClass="ExchangeDetailsViewController" customModule="ExcangeRate" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ExchangeDetailsViewController" id="L9l-rK-VbD" customClass="ExchangeDetailsViewController" customModule="ExcangeRate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bN7-mq-o9G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
