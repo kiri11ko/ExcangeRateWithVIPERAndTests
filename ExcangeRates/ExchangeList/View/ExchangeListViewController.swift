@@ -35,6 +35,7 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
         }
         
     }
+    
     func showAlert(title: String, message: String) {
         DispatchQueue.main.async { [weak self] in
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -44,6 +45,7 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
         }
         
     }
+    
     @objc func refreshJsonData(refreshControl: UIRefreshControl) {
         print("pull")
         output.viewIsReady()
