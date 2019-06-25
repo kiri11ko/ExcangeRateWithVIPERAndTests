@@ -9,8 +9,8 @@
 class ExchangeListRouter: ExchangeListRouterInput {
     var view: ExchangeListViewController!
     
-    func openDetailsView() {
-        view.performSegue(withIdentifier: "details", sender: nil)
+    func openDetailsView(data: CountryData) {
+        view.performSegue(withIdentifier: "details", sender: data)
     }
     
 

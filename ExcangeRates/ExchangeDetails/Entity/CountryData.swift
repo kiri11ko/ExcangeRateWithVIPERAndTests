@@ -10,6 +10,6 @@ import UIKit
 
 
 struct CountryData {
-    var flagImage: UIImage
-    var rate: String
+    var flagImage: String
+    var rate: Double
 }

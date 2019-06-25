@@ -17,7 +17,12 @@ class ExchangeListPresenter: ExchangeListModuleInput, ExchangeListViewOutput, Ex
     var sectionCount: Int = 1
     
     func openDetailsView(index: Int) {
-        router.openDetailsView()
+        guard let rates = (exchange?.exchangeRate.rates)  else { return }
+        
+        let image = exchange?.exchangeList[index] ?? "USD"
+        let rate = rates.list[image] ?? 0
+        let countryData = CountryData(flagImage: image, rate: rate)
+        router.openDetailsView(data: countryData)
     }
     func viewIsReady() {
         interactor.loadJSON() {

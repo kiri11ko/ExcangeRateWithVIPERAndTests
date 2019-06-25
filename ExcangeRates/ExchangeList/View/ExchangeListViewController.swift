@@ -80,9 +80,10 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.destination == "details" {
-//            
-//        }
+        if segue.identifier == "details" {
+            let destinationVC = segue.destination as! ExchangeDetailsViewController
+            destinationVC.output.countryData = sender as! CountryData
+        }
         
     }
 }
