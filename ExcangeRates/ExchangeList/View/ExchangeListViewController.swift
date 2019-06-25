@@ -8,20 +8,22 @@
 
 import UIKit
 
-class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
-
+class ExchangeListViewController: UIViewController, ExchangeListViewInput {
+    let refreshControl = UIRefreshControl()
+    @IBOutlet weak var tableView: UITableView!
     var output: ExchangeListViewOutput!
     // MARK: Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         output.viewIsReady()
-        self.refreshControl?.addTarget(self, action: #selector(refreshJsonData), for: UIControl.Event.valueChanged)
+        tableView.addSubview(refreshControl)
+        self.refreshControl.addTarget(self, action: #selector(refreshJsonData), for: UIControl.Event.valueChanged)
     }
     
     func refreshTableview() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
-            self.refreshControl?.endRefreshing()
+            self.refreshControl.endRefreshing()
         }
         
     }
@@ -56,30 +58,8 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
         
     }
     
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return output.sectionCount
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return output.exchange?.exchangeList.count ?? 0
-    }
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "ExchangeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExchangeTableViewCell
-        cell.output = self.output
-//        cell.textLabel?.text = output.exchange?.exchangeList[indexPath.row] ?? ""
-        let rate = output.exchange?.exchangeList[indexPath.row] ?? ""
-        cell.countrImageView.image = UIImage(named: rate)
-        cell.countryRateLabel.text = rate
-        cell.countryNameLabel.text = output.exchange?.countryList[indexPath.row] ?? ""
-        cell.rateExchangeTextField.tag = indexPath.row
-        cell.rateExchangeTextField.text = String(format: "%.2f", output.exchange?.exchangeRate.rates?.list[rate] ?? 0) 
-        
-        return cell
-    }
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        output.openDetailsView(index: indexPath.row)
-    }
+
+ 
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "details" {
@@ -90,3 +70,34 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
     }
 }
 
+extension ExchangeListViewController: UITableViewDelegate {
+    
+     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        output.openDetailsView(index: indexPath.row)
+    }
+}
+
+extension ExchangeListViewController: UITableViewDataSource {
+     func numberOfSections(in tableView: UITableView) -> Int {
+        return output.sectionCount
+    }
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return output.exchange?.exchangeList.count ?? 0
+    }
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UINib(nibName: "ExchangeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExchangeTableViewCell
+        cell.output = self.output
+        //        cell.textLabel?.text = output.exchange?.exchangeList[indexPath.row] ?? ""
+        let rate = output.exchange?.exchangeList[indexPath.row] ?? ""
+        cell.countrImageView.image = UIImage(named: rate)
+        cell.countryRateLabel.text = rate
+        cell.countryNameLabel.text = output.exchange?.countryList[indexPath.row] ?? ""
+        cell.rateExchangeTextField.tag = indexPath.row
+        cell.rateExchangeTextField.text = String(format: "%.2f", output.exchange?.exchangeRate.rates?.list[rate] ?? 0)
+        
+        return cell
+    }
+    
+}
