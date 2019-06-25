@@ -1,5 +1,5 @@
 //
-//  ExchangeListExchangeListInteractorTests.swift
+//  ExchangeDetailsExchangeDetailsRouterTests.swift
 //  ExcangeRate
 //
 //  Created by generamba help on 24/06/2019.
@@ -8,7 +8,7 @@
 
 import XCTest
 @testable import ExcangeRate
-class ExchangeListInteractorTests: XCTestCase {
+class ExchangeDetailsRouterTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -18,19 +18,5 @@ class ExchangeListInteractorTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
-    }
-
-    class MockPresenter: ExchangeListInteractorOutput {
-        func refreshUI() {
-            
-        }
-        
-        var exchange: ExchangeData?
-        
-        func showAlert(title: String, message: String) {
-            
-        }
-        
-
     }
 }

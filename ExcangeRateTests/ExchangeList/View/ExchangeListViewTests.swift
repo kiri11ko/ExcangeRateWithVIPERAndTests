@@ -8,6 +8,7 @@
 
 import XCTest
 @testable import ExcangeRate
+
 class ExchangeListViewTests: XCTestCase {
     var sut: ExchangeListViewController!
     override func setUp() {

@@ -27,6 +27,7 @@ class ExchangeListPresenter: ExchangeListModuleInput, ExchangeListViewOutput, Ex
     func viewIsReady() {
         interactor.loadJSON()
     }
+    
     func calculateRate(index: Int, text: String) {
         guard let rates = (exchange?.exchangeRate.rates)  else { return }
         guard let multy = Double(text)  else { return }

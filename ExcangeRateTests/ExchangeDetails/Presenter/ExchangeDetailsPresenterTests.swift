@@ -1,5 +1,5 @@
 //
-//  ExchangeListExchangeListInteractorTests.swift
+//  ExchangeDetailsExchangeDetailsPresenterTests.swift
 //  ExcangeRate
 //
 //  Created by generamba help on 24/06/2019.
@@ -8,7 +8,7 @@
 
 import XCTest
 @testable import ExcangeRate
-class ExchangeListInteractorTests: XCTestCase {
+class ExchangeDetailsPresenterTest: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -20,17 +20,22 @@ class ExchangeListInteractorTests: XCTestCase {
         super.tearDown()
     }
 
-    class MockPresenter: ExchangeListInteractorOutput {
-        func refreshUI() {
-            
-        }
-        
-        var exchange: ExchangeData?
-        
-        func showAlert(title: String, message: String) {
+    class MockInteractor: ExchangeDetailsInteractorInput {
+
+    }
+
+    class MockRouter: ExchangeDetailsRouterInput {
+
+    }
+
+    class MockViewController: ExchangeDetailsViewInput {
+        func setCountryData(country: String, rate: Double) {
             
         }
         
 
+        func setupInitialState() {
+
+        }
     }
 }

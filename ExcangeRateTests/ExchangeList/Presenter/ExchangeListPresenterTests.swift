@@ -21,9 +21,10 @@ class ExchangeListPresenterTest: XCTestCase {
     }
 
     class MockInteractor: ExchangeListInteractorInput {
-        func loadJSON(complition: @escaping () -> Void) {
+        func loadJSON() {
             
         }
+        
         
 
     }
@@ -39,6 +40,7 @@ class ExchangeListPresenterTest: XCTestCase {
     }
 
     class MockViewController: ExchangeListViewInput {
+        
         func showAlert(title: String, message: String) {
             
         }
