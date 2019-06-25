@@ -10,4 +10,5 @@ import Foundation
 
 protocol ExchangeListInteractorOutput: class {
     var exchange: ExchangeData? {get set}
+    func showAlert(title: String, message: String) 
 }

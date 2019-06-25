@@ -9,7 +9,7 @@
 import UIKit
 
 class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
-    
+
     var output: ExchangeListViewOutput!
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -22,6 +22,25 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
         DispatchQueue.main.async {
             self.tableView.reloadData()
             self.refreshControl?.endRefreshing()
+        }
+        
+    }
+    func refreshTableviewRows() {
+        DispatchQueue.main.async {
+            self.tableView.beginUpdates()
+            guard var indexPaths = self.tableView.indexPathsForVisibleRows else { return }
+            indexPaths.removeFirst()
+            self.tableView.reloadRows(at: indexPaths, with: .none)
+            self.tableView.endUpdates()
+        }
+        
+    }
+    func showAlert(title: String, message: String) {
+        DispatchQueue.main.async { [weak self] in
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "ok", style: .default, handler: nil)
+        alert.addAction(action)
+            self!.present(alert, animated: true, completion: nil)
         }
         
     }
@@ -43,12 +62,28 @@ class ExchangeListViewController: UITableViewController, ExchangeListViewInput {
         return output.exchange?.exchangeList.count ?? 0
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = output.exchange?.exchangeList[indexPath.row] ?? ""
+        tableView.register(UINib(nibName: "ExchangeTableViewCell", bundle: nil), forCellReuseIdentifier: "cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! ExchangeTableViewCell
+        cell.output = self.output
+//        cell.textLabel?.text = output.exchange?.exchangeList[indexPath.row] ?? ""
+        let rate = output.exchange?.exchangeList[indexPath.row] ?? ""
+        cell.countrImageView.image = UIImage(named: rate)
+        cell.countryRateLabel.text = rate
+        cell.countryNameLabel.text = output.exchange?.countryList[indexPath.row] ?? ""
+        cell.rateExchangeTextField.tag = indexPath.row
+        cell.rateExchangeTextField.text = String(format: "%.2f", output.exchange?.exchangeRate.rates?.list[rate] ?? 0) 
+        
         return cell
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        output.openDetailsView()
+        output.openDetailsView(index: indexPath.row)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.destination == "details" {
+//            
+//        }
+        
     }
 }
 

@@ -11,8 +11,10 @@ import Foundation
 struct ExchangeData {
     var exchangeRate: JsonBase
     var exchangeList: [String]
+    var countryList: [String]
     init(exchangeRate: JsonBase) {
         self.exchangeRate = exchangeRate
         self.exchangeList = ["USD", "EUR", "RUB", "HKD", "JPY"]
+        self.countryList = ["USA", "Europe", "Russia", "China", "Japan"]
     }
 }

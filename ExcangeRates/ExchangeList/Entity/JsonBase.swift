@@ -11,7 +11,7 @@ import Foundation
 struct JsonBase : Codable {
 	let base : String?
 	let date : String?
-	let rates : Rates?
+    var rates : Rates?
 
 	enum CodingKeys: String, CodingKey {
 

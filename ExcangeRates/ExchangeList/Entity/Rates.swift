@@ -8,6 +8,7 @@
 
 import Foundation
 struct Rates : Codable {
+    var list: [String: Double] = ["USD":1]
 	let aUD : Double?
 	let bGN : Double?
 	let bRL : Double?
@@ -89,6 +90,7 @@ struct Rates : Codable {
 		dKK = try values.decodeIfPresent(Double.self, forKey: .dKK)
 		gBP = try values.decodeIfPresent(Double.self, forKey: .gBP)
 		hKD = try values.decodeIfPresent(Double.self, forKey: .hKD)
+        list[CodingKeys.hKD.rawValue] = hKD
 		hRK = try values.decodeIfPresent(Double.self, forKey: .hRK)
 		hUF = try values.decodeIfPresent(Double.self, forKey: .hUF)
 		iDR = try values.decodeIfPresent(Double.self, forKey: .iDR)
@@ -96,6 +98,7 @@ struct Rates : Codable {
 		iNR = try values.decodeIfPresent(Double.self, forKey: .iNR)
 		iSK = try values.decodeIfPresent(Double.self, forKey: .iSK)
 		jPY = try values.decodeIfPresent(Double.self, forKey: .jPY)
+        list[CodingKeys.jPY.rawValue] = jPY
 		kRW = try values.decodeIfPresent(Double.self, forKey: .kRW)
 		mXN = try values.decodeIfPresent(Double.self, forKey: .mXN)
 		mYR = try values.decodeIfPresent(Double.self, forKey: .mYR)
@@ -105,12 +108,14 @@ struct Rates : Codable {
 		pLN = try values.decodeIfPresent(Double.self, forKey: .pLN)
 		rON = try values.decodeIfPresent(Double.self, forKey: .rON)
 		rUB = try values.decodeIfPresent(Double.self, forKey: .rUB)
+        list[CodingKeys.rUB.rawValue] = rUB
 		sEK = try values.decodeIfPresent(Double.self, forKey: .sEK)
 		sGD = try values.decodeIfPresent(Double.self, forKey: .sGD)
 		tHB = try values.decodeIfPresent(Double.self, forKey: .tHB)
 		tRY = try values.decodeIfPresent(Double.self, forKey: .tRY)
 		zAR = try values.decodeIfPresent(Double.self, forKey: .zAR)
 		eUR = try values.decodeIfPresent(Double.self, forKey: .eUR)
+        list[CodingKeys.eUR.rawValue] = eUR
 	}
 
 }

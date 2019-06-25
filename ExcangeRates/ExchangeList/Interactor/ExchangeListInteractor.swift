@@ -17,7 +17,12 @@ class ExchangeListInteractor: ExchangeListInteractorInput {
         guard let url = URL(string: "https://revolut.duckdns.org/latest?base=USD") else { return }
         let task = URLSession.shared.dataTask(with: url) { (data, response,  error)  in
             let jsonDecoder = JSONDecoder()
-            let responseModel = try? jsonDecoder.decode(JsonBase.self, from: data!)
+            if let error = error {
+                self.output.showAlert(title: "Error", message: error.localizedDescription )
+                return
+            }
+            guard let data = data else { return }
+            let responseModel = try? jsonDecoder.decode(JsonBase.self, from: data)
             guard let model = responseModel else { return }
             self.output.exchange = ExchangeData(exchangeRate: model)
             print(model)

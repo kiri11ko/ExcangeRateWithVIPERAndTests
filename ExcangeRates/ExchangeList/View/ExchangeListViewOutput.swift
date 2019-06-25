@@ -12,8 +12,9 @@ protocol ExchangeListViewOutput {
         @author generamba help
         Notify presenter that view is ready
     */
+    func calculateRate(index: Int, text: String) 
     var exchange: ExchangeData? { get }
     var sectionCount: Int { get }
     func viewIsReady()
-    func openDetailsView()
+    func openDetailsView(index: Int)
 }

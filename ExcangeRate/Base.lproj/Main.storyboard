@@ -40,6 +40,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="yrP-9O-Wty"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="RrK-sE-uDl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </refreshControl>
                     <connections>
@@ -55,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="-6.0267857142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Exchangedetails View Controller-->
         <scene sceneID="ixz-78-Smb">
             <objects>
-                <viewController id="L9l-rK-VbD" sceneMemberID="viewController">
+                <viewController id="L9l-rK-VbD" customClass="ExchangeDetailsViewController" customModule="ExcangeRate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bN7-mq-o9G">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,8 +91,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hPl-09-cLr"/>
                     </view>
+                    <connections>
+                        <outlet property="countryFlagImageView" destination="i9x-94-vey" id="eDg-3Y-Dtf"/>
+                        <outlet property="exchangeRatelabel" destination="hMV-97-7S9" id="gm8-xn-Cz4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cf2-X6-1mh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="a3B-mZ-9X5" customClass="ExchangeDetailsModuleInitializer" customModule="ExcangeRate" customModuleProvider="target">
+                    <connections>
+                        <outlet property="exchangedetailsViewController" destination="L9l-rK-VbD" id="3NH-je-W7V"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="1697.1014492753625" y="-6.0267857142857144"/>
         </scene>
